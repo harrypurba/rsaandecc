@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d04c769-9f8f-4086-ac4a-7e1d57745720" name="Default" comment="RSA enkripsi , dekripsi, kunci. Tes class.">
+    <list default="true" id="6d04c769-9f8f-4086-ac4a-7e1d57745720" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/output.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/privat.pri" afterPath="$PROJECT_DIR$/privat.pri" />
-      <change beforePath="$PROJECT_DIR$/publik.pub" afterPath="$PROJECT_DIR$/publik.pub" />
-      <change beforePath="$PROJECT_DIR$/src/RSA.java" afterPath="$PROJECT_DIR$/src/RSA.java" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" afterPath="$PROJECT_DIR$/src/main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +18,8 @@
       <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="98" column="35" lean-forward="true" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+            <state relative-caret-position="1664">
+              <caret line="110" column="52" lean-forward="true" selection-start-line="110" selection-start-column="52" selection-end-line="110" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -264,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521861303376</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Baca file, durasi enkrip/dekrip, input output kunci publik,privat">
+      <created>1521868679350</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1521868679350</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -303,7 +307,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="RSA enkripsi , dekripsi, kunci. Tes class." />
-    <option name="LAST_COMMIT_MESSAGE" value="RSA enkripsi , dekripsi, kunci. Tes class." />
+    <MESSAGE value="Baca file, durasi enkrip/dekrip, input output kunci publik,privat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Baca file, durasi enkrip/dekrip, input output kunci publik,privat" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -359,14 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/privat.pri">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -383,10 +380,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="98" column="35" lean-forward="true" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+        <state relative-caret-position="1664">
+          <caret line="110" column="52" lean-forward="true" selection-start-line="110" selection-start-column="52" selection-end-line="110" selection-end-column="52" />
           <folding />
         </state>
       </provider>
