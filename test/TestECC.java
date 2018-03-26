@@ -21,6 +21,16 @@ public class TestECC {
 //    }
 
     @Test
+    public void testCountPoints(){
+        try {
+            CurveEquation curveEquation = new CurveEquation(1,6,11);
+            System.out.println(curveEquation.getPointsCount());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
     public void testGetPoints(){
         try {
             CurveEquation curveEquation = new CurveEquation(1,6,11);
@@ -43,11 +53,59 @@ public class TestECC {
     }
 
     @Test
+    public void pointSubtraction(){
+        try {
+            CurveEquation curveEquation = new CurveEquation(1,6,11);
+            Point r = curveEquation.subtractPoint(new Point(8,8),new Point(2,4));
+            System.out.println(r);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
     public void multiplyPointTest(){
         try {
             CurveEquation curveEquation = new CurveEquation(1,6,11);
-            Point r = curveEquation.multiplyPoint(new Point(2,4),13);
-            System.out.println(r);
+            Point r = curveEquation.multiplyPoint(new Point(10,9),13);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void writeKeyTest(){
+        try {
+            ECC ecc = new ECC(1,6,11);
+            ecc.generateKey();
+            ecc.writeKey("key/ecc_key");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void readKeyTest(){
+        try {
+            ECC ecc = new ECC(1,6,11);
+            ecc.readKey("key/ecc_key");
+            ecc.readKey("key/ecc_key.pub");
+            System.out.println(ecc.publicKey);
+            System.out.println(ecc.privateKey);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void encryptDecrypt(){
+        try {
+            ECC ecc = new ECC(1,6,11);
+            ecc.generateKey();
+            List<Point> enc = ecc.encryptPoint(new Point(2,7));
+            System.out.println(enc);
+            Point dec = ecc.decryptPoint(enc);
+            System.out.println(dec);
         } catch (Exception e) {
             e.printStackTrace();
         }
