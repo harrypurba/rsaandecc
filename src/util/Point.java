@@ -1,13 +1,15 @@
 package util;
 
+import java.math.BigInteger;
+
 public class Point {
-    public int x;
-    public int y;
+    public BigInteger x;
+    public BigInteger y;
 
     public Point() {
     }
 
-    public Point(int x, int y) {
+    public Point(BigInteger x, BigInteger y) {
         this.x = x;
         this.y = y;
     }
@@ -27,17 +29,19 @@ public class Point {
 
         Point point = (Point) o;
 
-        if (Double.compare(point.x, x) != 0) return false;
-        return Double.compare(point.y, y) == 0;
+        if (!this.x.equals(point.x)) return false;
+        return this.y.equals(point.y);
     }
 
     @Override
     public int hashCode() {
         int result;
         long temp;
-        temp = Double.doubleToLongBits(x);
+        int hashx = x.hashCode();
+        int hashy = y.hashCode();
+        temp = Double.doubleToLongBits(hashx);
         result = (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(y);
+        temp = Double.doubleToLongBits(hashy);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }

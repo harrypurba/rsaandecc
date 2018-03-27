@@ -21,7 +21,7 @@ public class ECC extends BaseAsymetricCrypt{
     List<Point> listPoints;
     HashMap<Point,Byte> mapPoints;
 
-    public ECC(int a, int b,int p) throws Exception {
+    public ECC(BigInteger a, BigInteger b,BigInteger p) throws Exception {
         curveEquation = new CurveEquation(a,b,p);
         List<Point> points = curveEquation.getAllPossiblePoints();
         if(points.size()<256){
@@ -90,7 +90,7 @@ public class ECC extends BaseAsymetricCrypt{
 
     public List<Point> encryptPoint(Point in){
         Random rand = new Random();
-        int k = rand.nextInt(curveEquation.p/10-2);
+        int k = rand.nextInt(curveEquation.p.intValue()/10-2);
         List<Point> ret = new ArrayList<>();
         ret.add(0,curveEquation.multiplyPoint(base,k));
         Point ptemp = curveEquation.multiplyPoint(publicKey,k);
