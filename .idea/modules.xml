@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RSAandECC.iml" filepath="$PROJECT_DIR$/RSAandECC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RSAandECC_main.iml" filepath="$PROJECT_DIR$/.idea/modules/RSAandECC_main.iml" group="RSAandECC" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RSAandECC_test.iml" filepath="$PROJECT_DIR$/.idea/modules/RSAandECC_test.iml" group="RSAandECC" />
     </modules>
   </component>
 </project>
