@@ -20,6 +20,16 @@ public class CurveEquation {
         this.p = p;
     }
 
+    public boolean isXSolvable(int x){
+        int mod = ((x*x*x)+a*x+b) % p;
+        // y^2 congruence with mod%p
+        for(int y=0;y<p;y++){
+            if((y*y%p)==mod)
+                return true;
+        }
+        return false;
+    }
+
     public List<Point> getAllPossiblePoints(){
         List<Point> points = new ArrayList<>();
         for(int x=0;x<p;x++){
@@ -45,13 +55,13 @@ public class CurveEquation {
 
     public Point addPoint(Point p1, Point p2){
         if(p1.equals(p2)){
-            System.out.println("sama");
             if(p1.y==0)
                 return null;
             int divisor = Math.abs(2*p1.y);
             int invMod = Util.modInverse(divisor,p);
             int m = Math.floorMod((((3*p1.x*p1.x+a))*invMod),p);
             int xr = (m*m-2*p1.x);
+            xr = Math.floorMod(xr,this.p);
             Point ret = new Point(xr, Math.floorMod((m*(p1.x-xr)-p1.y),p));
             return (isInCurve(ret)?ret:null);
         }
@@ -73,7 +83,6 @@ public class CurveEquation {
         --n;
         for(int i=0;i<n;++i){
             r = addPoint(p,r);
-            System.out.println(i+3+" : "+r);
         }
         return r;
     }
